@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import whois
 import dns.resolver
 import hashlib
 import os
@@ -9,6 +10,19 @@ import math
 
 # Set your VirusTotal API Key
 VT_API_KEY = "your_api_key_here"
+
+def whois_lookup(domain):
+    try:
+        domain_info = whois.whois(domain)
+        return {
+            "Domain": domain_info.domain_name,
+            "Registrar": domain_info.registrar,
+            "Creation Date": domain_info.creation_date,
+            "Expiry Date": domain_info.expiration_date,
+            "Name Servers": domain_info.name_servers,
+        }
+    except Exception as e:
+        return {"Error": str(e)}
 
 
 def dns_lookup(domain):
