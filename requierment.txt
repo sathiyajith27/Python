@@ -1,4 +1,1 @@
-streamlit
-python-whois
-dnspython
-requests
+pip install streamlit python-whois dnspython requests
