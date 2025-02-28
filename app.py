@@ -9,7 +9,7 @@ import time
 import math
 
 # Set your VirusTotal API Key
-VT_API_KEY = "7afe47a817a1bfa2c01d8be1ecbeb90ef5636a844d4527e9d45ec2f9bc5da63e"
+VT_API_KEY = "your_api_key_here"
 
 def whois_lookup(domain):
     try:
