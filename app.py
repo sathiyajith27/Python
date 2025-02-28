@@ -1,3 +1,15 @@
+import os
+import subprocess
+
+# Install missing modules
+def install_dependencies():
+    try:
+        import whois
+    except ImportError:
+        subprocess.run(["pip", "install", "python-whois"])
+
+install_dependencies()
+
 import streamlit as st
 import requests
 import whois
