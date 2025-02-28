@@ -1,4 +1,6 @@
 streamlit
 python-whois
+whois
+dns.resolver
 dnspython
 requests
