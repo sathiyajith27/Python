@@ -6,7 +6,7 @@ def install_dependencies():
     try:
         import whois
     except ImportError:
-        subprocess.run(["pip", "install", "python-whois"])
+        subprocess.run(["pip", "install", "whois","dns.resolver"])
 
 install_dependencies()
 
